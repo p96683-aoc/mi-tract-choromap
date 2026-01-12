@@ -1,0 +1,32 @@
+{
+  "dataStudio": {
+    "name": "Choropleth Map",
+    "company": "Dein Unternehmen",
+    "companyUrl": "https://efl-algona.github.io/",
+    "description": "Choropleth map using GeoJSON",
+    "resources": {
+      "js": [
+        "https://efl-algona.github.io/choromap/choromap.js"
+      ],
+      "css": [
+        "https://efl-algona.github.io/choromap/choromap.css"
+      ],
+      "config": "https://efl-algona.github.io/choromap/choromap.json"
+    },
+    "fields": {
+      "dimension": {
+        "min": 1,
+        "max": 2
+      },
+      "metric": {
+        "min": 1,
+        "max": 1
+      }
+    },
+    "style": {},
+    "theme": {},
+    "supports": {
+      "filter": true
+    }
+  }
+}

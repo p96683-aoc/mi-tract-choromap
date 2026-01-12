@@ -1,0 +1,386 @@
+{
+  "data": [
+    {
+      "id": "concepts",
+      "label": "Concepts",
+      "elements": [
+        {
+          "id": "mapDimension",
+          "label": "Dimension",
+          "type": "DIMENSION",
+          "options": {
+            "min": 2,
+            "max": 2
+          }
+        },
+        {
+          "id": "mapMetric",
+          "label": "Metric",
+          "type": "METRIC",
+          "options": {
+            "min": 1,
+            "max": 1
+          }
+        },
+        {
+          "id": "tooltipDimension",
+          "label": "Tooltip",
+          "type": "DIMENSION",
+          "options": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "data",
+      "label": "Data",
+      "elements": [
+        {
+          "type": "TEXTINPUT",
+          "id": "polyNumber",
+          "label": "Number of Polygons",
+          "defaultValue": "max"
+        }
+      ]
+    },
+    {
+      "id": "projection",
+      "label": "Projection",
+      "elements": [
+        {
+          "type": "SELECT_SINGLE",
+          "id": "projectionSelection",
+          "label": "Map Projection",
+          "defaultValue": "Mercator",
+          "options": [
+            {
+              "label": "Azimuthal Equal Area",
+              "value": "AzimuthalEqualArea"
+            },
+            {
+              "label": "Azimuthal Equidistant",
+              "value": "AzimuthalEquidistant"
+            },
+            {
+              "label": "Gnomonic",
+              "value": "Gnomonic"
+            },
+            {
+              "label": "Orthographic",
+              "value": "Orthographic"
+            },
+            {
+              "label": "Stereographic",
+              "value": "Stereographic"
+            },
+            {
+              "label": "Albers",
+              "value": "Albers"
+            },
+            {
+              "label": "Conic Conformal",
+              "value": "ConicConformal"
+            },
+            {
+              "label": "Conic Equal Area",
+              "value": "ConicEqualArea"
+            },
+            {
+              "label": "Conic Equidistant",
+              "value": "ConicEquidistant"
+            },
+            {
+              "label": "Equirectangular",
+              "value": "Equirectangular"
+            },
+            {
+              "label": "Mercator",
+              "value": "Mercator"
+            },
+            {
+              "label": "Transverse Mercator",
+              "value": "TransverseMercator"
+            }
+          ]
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "projectionScale",
+          "label": "Scale",
+          "defaultValue": ""
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "projectionTranslateX",
+          "label": "Translate X",
+          "defaultValue": ""
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "projectionTranslateY",
+          "label": "Translate Y",
+          "defaultValue": ""
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "projectionCenterLon",
+          "label": "Center Lon",
+          "defaultValue": "0"
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "projectionCenterLat",
+          "label": "Center Lat",
+          "defaultValue": "0"
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "projectionRotateLambda",
+          "label": "Rotate Lambda",
+          "defaultValue": ""
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "projectionRotatePhi",
+          "label": "Rotate Phi",
+          "defaultValue": ""
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "projectionRotateGamma",
+          "label": "Rotate Gamma",
+          "defaultValue": ""
+        }
+      ]
+    },
+    {
+      "id": "color",
+      "label": "Colors",
+      "elements": [
+        {
+          "type": "FILL_COLOR",
+          "id": "minColor",
+          "label": "Min Color",
+          "defaultValue": "#BED9FF"
+        },
+        {
+          "type": "FILL_COLOR",
+          "id": "midColor",
+          "label": "Mid Color",
+          "defaultValue": "#0053c7"
+        },
+        {
+          "type": "FILL_COLOR",
+          "id": "maxColor",
+          "label": "Max Color",
+          "defaultValue": "#003B8E"
+        },
+        {
+          "type": "FILL_COLOR",
+          "id": "nullColor",
+          "label": "Null Color",
+          "defaultValue": "#808080"
+        },
+        {
+          "type": "BORDER_COLOR",
+          "id": "polygonBorderColor",
+          "label": "Polygon Border Color",
+          "defaultValue": "#fff"
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "polygonBorderWidth",
+          "label": "Polygon Border Width",
+          "defaultValue": "0"
+        }
+      ]
+    },
+    {
+      "id": "legend",
+      "label": "Legend",
+      "elements": [
+        {
+          "type": "SELECT_SINGLE",
+          "id": "showLegend",
+          "label": "Legend Orientation",
+          "defaultValue": "Vertical",
+          "options": [
+            {
+              "label": "Vertical",
+              "value": "Vertical"
+            },
+            {
+              "label": "Horizontal",
+              "value": "Horizontal"
+            },
+            {
+              "label": "Off",
+              "value": "Off"
+            }
+          ]
+        },
+        {
+          "type": "SELECT_SINGLE",
+          "id": "legendType",
+          "label": "Legend Type",
+          "defaultValue": "Linear",
+          "options": [
+            {
+              "label": "Linear",
+              "value": "Linear"
+            },
+            {
+              "label": "Quantile",
+              "value": "Quantile"
+            },
+            {
+              "label": "Divergent",
+              "value": "Divergent"
+            },
+            {
+              "label": "Categorical",
+              "value": "Categorical"
+            },
+            {
+              "label": "User Breaks",
+              "value": "User Breaks"
+            },
+            {
+              "label": "Custom",
+              "value": "Custom"
+            }
+          ]
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "legendCells",
+          "label": "Number of Quantiles / Categories",
+          "defaultValue": "5"
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "legendBreaks",
+          "label": "Custom Breaks",
+          "defaultValue": "1,5,10"
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "legendStrings",
+          "label": "Custom Strings",
+          "defaultValue": ""
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "legendDecimalPlaces",
+          "label": "Decimal Places",
+          "defaultValue": "0"
+        },
+        {
+          "type": "SELECT_SINGLE",
+          "id": "legendDecimalPlacesShort",
+          "label": "Number Format",
+          "defaultValue": "Long",
+          "options": [
+            {
+              "label": "Long",
+              "value": "Long"
+            },
+            {
+              "label": "Short",
+              "value": "Short"
+            }
+          ]
+        },
+        {
+            "type": "TEXTINPUT",
+            "id": "legendTitle",
+            "label": "Legend Title",
+            "defaultValue": "Legend Title"
+        },
+        {
+            "type": "TEXTINPUT",
+            "id": "legendPosition",
+            "label": "Legend Position (x,y)",
+            "defaultValue": "20,40"
+        },
+        {
+            "type": "BORDER_COLOR",
+            "id": "legendBorderColor",
+            "label": "Legend Border Color",
+            "defaultValue": "#fff"
+        },
+        {
+            "type": "TEXTINPUT",
+            "id": "legendBorderWidth",
+            "label": "Legend Border Width",
+            "defaultValue": "1"
+        },
+        {
+            "type": "FONT_COLOR",
+            "id": "legendTextColor",
+            "label": "Legend Font Color"
+        },
+        {
+            "type": "FONT_SIZE",
+            "id": "legendTextSize",
+            "label": "Legend Font Size"
+        },
+        {
+            "type": "FONT_FAMILY",
+            "id": "legendTextFamily",
+            "label": "Legend Font Family"
+        }
+      ]
+    },
+    {
+      "id": "boundary",
+      "label": "Boundary",
+      "elements": [
+        {
+          "type": "TEXTINPUT",
+          "id": "boundaryGeoJSON",
+          "label": "Input boundary GeoJSON",
+          "defaultValue": "Add boundary geojson here"
+        },
+        {
+          "type": "BORDER_COLOR",
+          "id": "boundaryBorderColor",
+          "label": "Boundary Border Color",
+          "defaultValue": "#000"
+        },
+        {
+          "type": "TEXTINPUT",
+          "id": "boundaryBorderWidth",
+          "label": "Boundary Border Width",
+          "defaultValue": "0"
+        },
+        {
+          "type": "SELECT_SINGLE",
+          "id": "zoomOnFilter",
+          "label": "Zoom to data extent on filters?",
+          "defaultValue": "Yes",
+          "options": [
+            {
+              "label": "Yes",
+              "value": "Yes"
+            },
+            {
+              "label": "No",
+              "value": "No"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "interactions": [
+    {
+      "id": "onClick",
+      "supportedActions": ["FILTER"]
+    }
+  ]
+}
